@@ -13,6 +13,12 @@
 		30A0EB982786B4790096456C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0EB962786B4790096456C /* Main.storyboard */; };
 		30A0EB9A2786B47E0096456C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0EB992786B47E0096456C /* Assets.xcassets */; };
 		30A0EB9D2786B47E0096456C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0EB9B2786B47E0096456C /* LaunchScreen.storyboard */; };
+		30A0EBA52786B89F0096456C /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0EBA42786B89F0096456C /* LogoutViewController.swift */; };
+		30A0EBA72786B8A90096456C /* Logout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0EBA62786B8A90096456C /* Logout.storyboard */; };
+		30A0EBA92786B9B50096456C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A0EBA82786B9B50096456C /* GoogleService-Info.plist */; };
+		30A0EBAC2786BAD80096456C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 30A0EBAB2786BAD80096456C /* FirebaseAuth */; };
+		30A0EBAF2786C6080096456C /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0EBAE2786C6080096456C /* FirebaseAuthManager.swift */; };
+		30A0EBB22786D1DC0096456C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 30A0EBB12786D1DC0096456C /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		30A0EB992786B47E0096456C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A0EB9C2786B47E0096456C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30A0EB9E2786B47E0096456C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A0EBA42786B89F0096456C /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		30A0EBA62786B8A90096456C /* Logout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Logout.storyboard; sourceTree = "<group>"; };
+		30A0EBA82786B9B50096456C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30A0EBAE2786C6080096456C /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A0EBAC2786BAD80096456C /* FirebaseAuth in Frameworks */,
+				30A0EBB22786D1DC0096456C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,43 @@
 		30A0EB8F2786B4790096456C /* FirebaseAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				30A0EBB42786D6250096456C /* ViewControllers */,
+				30A0EBB32786D6190096456C /* Storyboards */,
+				30A0EBAD2786C5E80096456C /* Firebase */,
 				30A0EB902786B4790096456C /* AppDelegate.swift */,
 				30A0EB922786B4790096456C /* SceneDelegate.swift */,
-				30A0EB942786B4790096456C /* ViewController.swift */,
-				30A0EB962786B4790096456C /* Main.storyboard */,
 				30A0EB992786B47E0096456C /* Assets.xcassets */,
-				30A0EB9B2786B47E0096456C /* LaunchScreen.storyboard */,
 				30A0EB9E2786B47E0096456C /* Info.plist */,
+				30A0EBA82786B9B50096456C /* GoogleService-Info.plist */,
 			);
 			path = FirebaseAuthentication;
+			sourceTree = "<group>";
+		};
+		30A0EBAD2786C5E80096456C /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				30A0EBAE2786C6080096456C /* FirebaseAuthManager.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		30A0EBB32786D6190096456C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				30A0EB962786B4790096456C /* Main.storyboard */,
+				30A0EBA62786B8A90096456C /* Logout.storyboard */,
+				30A0EB9B2786B47E0096456C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		30A0EBB42786D6250096456C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				30A0EB942786B4790096456C /* ViewController.swift */,
+				30A0EBA42786B89F0096456C /* LogoutViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +123,10 @@
 			dependencies = (
 			);
 			name = FirebaseAuthentication;
+			packageProductDependencies = (
+				30A0EBAB2786BAD80096456C /* FirebaseAuth */,
+				30A0EBB12786D1DC0096456C /* IQKeyboardManagerSwift */,
+			);
 			productName = FirebaseAuthentication;
 			productReference = 30A0EB8D2786B4790096456C /* FirebaseAuthentication.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,10 @@
 				Base,
 			);
 			mainGroup = 30A0EB842786B4790096456C;
+			packageReferences = (
+				30A0EBAA2786BAD80096456C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				30A0EBB02786D1DB0096456C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 30A0EB8E2786B4790096456C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +175,8 @@
 			files = (
 				30A0EB9D2786B47E0096456C /* LaunchScreen.storyboard in Resources */,
 				30A0EB9A2786B47E0096456C /* Assets.xcassets in Resources */,
+				30A0EBA92786B9B50096456C /* GoogleService-Info.plist in Resources */,
+				30A0EBA72786B8A90096456C /* Logout.storyboard in Resources */,
 				30A0EB982786B4790096456C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +190,9 @@
 			files = (
 				30A0EB952786B4790096456C /* ViewController.swift in Sources */,
 				30A0EB912786B4790096456C /* AppDelegate.swift in Sources */,
+				30A0EBA52786B89F0096456C /* LogoutViewController.swift in Sources */,
 				30A0EB932786B4790096456C /* SceneDelegate.swift in Sources */,
+				30A0EBAF2786C6080096456C /* FirebaseAuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +412,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		30A0EBAA2786BAD80096456C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		30A0EBB02786D1DB0096456C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30A0EBAB2786BAD80096456C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30A0EBAA2786BAD80096456C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		30A0EBB12786D1DC0096456C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 30A0EBB02786D1DB0096456C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 30A0EB852786B4790096456C /* Project object */;
 }
