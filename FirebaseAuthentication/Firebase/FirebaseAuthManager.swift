@@ -27,7 +27,6 @@ final class FirebaseAuthManager {
         print(error.localizedDescription)
         completion(false)
       } else {
-        print(String(describing: result))
         completion(true)
       }
     }

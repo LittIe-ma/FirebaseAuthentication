@@ -24,10 +24,20 @@ final class ViewController: UIViewController {
     }
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+#if DEBUG
+    loginEmailTextField.text = "test@test.com"
+    loginPasswordTextField.text = "123456"
+#endif
+  }
+
   @objc private func didTapLoginButton(_ sender: UIResponder) {
     guard let email = loginEmailTextField.text, let password = loginPasswordTextField.text else {
       return
     }
+
     FirebaseAuthManager().signIn(email: email, password: password) { [weak self] success in
       guard self != nil else { return }
       if success {
